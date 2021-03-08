@@ -9,29 +9,32 @@ const unsplash = createApi({
 
 function ShopItem(props) {
 
-const [shop, setShop]= useState({})
+const [desc, setDesc]= useState("")
+const [image, setImage]=useState("")
 
+const fetchItem = async () =>{
+  const data = await unsplash.photos.get({
+    photoId: props.match.params.id
+    })
+  const result = await data.response
+  setDesc(result.alt_description)
+  setImage(result.urls.small)
+
+}
 
 useEffect(()=>{
-  const fetchItem = async () =>{
-    const data = await unsplash.photos.get({
-        photoId: props.match.params.id
-      })
-    const result = await data.response
-    setShop(result)
-    console.log(result)
 
-
-  }
 fetchItem()
 
 
 }, []);
 
+    return(
+          <ShopItemDetails desc={desc} image={image} />
+    
+    )
 
-  return(
-    <ShopItemDetails shop={shop} />
-  )
+
 
 
 }
