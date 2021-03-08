@@ -7,10 +7,11 @@ const unsplash = createApi({
 
 });
 
-function Shop() {
+function Shop(props) {
 
 const [plantImages, setPlantImages] = useState([])
 const [initialSearch, setInitialSearch] =useState('Indoor Plant')
+
 
 const getPlantImages = (url) => {
 console.log(url)
@@ -21,6 +22,8 @@ console.log(plantImages)
 const getCards = (query) => {
   setInitialSearch(query)
 }
+
+
 
 const getImages = (query) =>{
   unsplash.search.getPhotos({
@@ -43,6 +46,7 @@ const getImages = (query) =>{
 
 useEffect(() => {
   getImages(initialSearch)
+
 }, [initialSearch]);
 
 
@@ -65,7 +69,7 @@ useEffect(() => {
           </div>
           <div>
             <div className="shopItemsContainer">
-                <Cards images={plantImages} />
+                <Cards addToCart={props.addToCart} images={plantImages} />
 
 
 

@@ -22,7 +22,7 @@ function Nav() {
               <li>Contact</li>
             </Link>
             <li className="cart"><img  src={cart} alt="cart"></img></li>
-
+            <span></span>
           </ul>
         </nav>
 
