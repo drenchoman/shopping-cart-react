@@ -9,7 +9,8 @@ const unsplash = createApi({
 
 function Shop() {
 
-const [plantImages, setPlantImages] = useState([]);
+const [plantImages, setPlantImages] = useState([])
+const [initialSearch, setInitialSearch] =useState('Indoor Plant')
 
 const getPlantImages = (url) => {
 console.log(url)
@@ -17,9 +18,13 @@ setPlantImages(url)
 console.log(plantImages)
 }
 
-const getImages = () =>{
+const getCards = (query) => {
+  setInitialSearch(query)
+}
+
+const getImages = (query) =>{
   unsplash.search.getPhotos({
-    'query': 'Indoor Plant',
+    'query': query,
     'page': 1,
     'perPage': 16,
     'orientation': 'portrait',
@@ -37,8 +42,8 @@ const getImages = () =>{
 }
 
 useEffect(() => {
-  getImages()
-}, []);
+  getImages(initialSearch)
+}, [initialSearch]);
 
 
 
@@ -52,9 +57,9 @@ useEffect(() => {
             <h3 className="navHeader">All Products</h3>
             <div className="navSelector">
               <ul className="navTitles">
-                <li>Plants</li>
-                <li>Accessories</li>
-                <li>Pots</li>
+                <li onClick={()=>getCards('Indoor Plant')}>Plants</li>
+                <li onClick={()=>getCards('Shovel')}>Accessories</li>
+                <li onClick={()=>getCards('Flower Vase')}>Pots</li>
               </ul>
             </div>
           </div>

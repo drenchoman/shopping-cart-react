@@ -4,6 +4,7 @@ import About from './components/About'
 import Home from './components/Home'
 import Shop from './components/Shop'
 import Nav from './components/Nav'
+import ShopItem from './components/ShopItem'
 
 function App() {
   return (<BrowserRouter>
@@ -13,7 +14,8 @@ function App() {
       <Switch>
         <Route exact="exact" path="/" component={Home}/>
         <Route path="/About" component={About}/>
-        <Route path="/Shop" component={Shop}/>
+        <Route exact path="/Shop" component={Shop}/>
+        <Route path="/shop/:id" component={ShopItem} />
       </Switch>
     </div>
   </BrowserRouter>)
