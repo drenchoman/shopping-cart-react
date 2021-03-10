@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import cart from "../images/cart.svg";
 
 
-function Nav() {
+function Nav(props) {
+
     return (
         <nav className="navBar">
           <div className="logo">
@@ -21,9 +22,11 @@ function Nav() {
             <Link to="/contact">
               <li>Contact</li>
             </Link>
-            <li className="cart"><img  src={cart} alt="cart"></img></li>
-            <span></span>
+            <Link to="/cart">
+              <li className="cart"><img  src={cart} alt="cart"></img></li>
+            </Link>
           </ul>
+          <span className="cartCount">{props.cartCount}</span>
         </nav>
 
     )

@@ -7,12 +7,12 @@ function Cards(props) {
         <div className="imageGrid">
           {props.images.map((image, i) =>
             <div className="plantCard" key={i}>
-            <Link to={`/shop/${image.id}`} param={image.id}>
-              <img className="plantImages" key={image.id} alt={image.alt_description} src={image.urls.small}></img>
+            <Link to={`/shop/${image.id}`} >
+              <img className="plantImages" key={image.id} alt={image.title} src={image.src}></img>
             </Link>
               <div className="plantDetails">
-                <p>{image.alt_description}</p>
-                <p>${props.price}</p>
+                <p>{image.title}</p>
+                <p>${image.price}</p>
               </div>
 
 
