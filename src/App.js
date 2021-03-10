@@ -15,13 +15,17 @@ const [cartCount, setCartCount]=useState(0)
 const [cartTotal, setCartTotal]=useState()
 
 const addToCart = (cartName) => {
-  checkCart(cartName.id)
-  setCartItems(prevState =>
-    [...prevState, (cartName)])
-    console.log(cartItems.length)
-  addCartCount(cartItems.length)
+   const found = checkCart(cartName.id)
+   console.log(found)
+   console.log(">>>>>,.....,<<<<<<")
 
-};
+    setCartItems(prevState =>
+      [...prevState, (cartName)])
+      console.log(cartItems.length)
+    addCartCount(cartItems.length)
+  }
+
+
 
 const getTotal = () => {
   const totalPrice = cartItems.reduce((prevValue, currentValue) => prevValue + currentValue.price, 0
@@ -31,8 +35,12 @@ console.log(totalPrice)
 }
 
 const checkCart = (value) => {
-  const found = cartItems.some(x => x.id === value)
-  console.log(found)
+  const found = cartItems.findIndex(x => x.id === value)
+  console.log("~~~~~~~~~~~FOUND~~~~~~~~~~~")
+  console.log("found" + found)
+  return found
+
+
 }
 
 const addCartCount = (value) => {
@@ -42,7 +50,7 @@ const addCartCount = (value) => {
 
 useEffect(()=>{
 addCartCount(cartItems.length)
-getTotal();
+// getTotal();
 console.log(cartItems)
 
 
@@ -57,7 +65,7 @@ console.log(cartItems)
         <Route path="/About" component={About}/>
         <Route exact path="/Shop" component={Shop} />
         <Route path="/shop/:id" render={(props) => <ShopItem {...props} addToCart={addToCart} />} />
-        <Route path="/Cart" render={(props) => <Cart {...props} cartItems={cartItems} cartCount={cartCount} cartTotal={cartTotal} />} />
+        <Route path="/Cart" render={(props) => <Cart {...props} cartItems={cartItems} cartCount={cartCount} cartTotal={cartTotal} getTotal={getTotal} />} />
 
       </Switch>
     </div>

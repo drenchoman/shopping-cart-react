@@ -3,6 +3,10 @@ import EmptyCart from './EmptyCart'
 
 function Cart(props) {
 
+  useEffect(()=>{
+    props.getTotal();
+  })
+
 if (props.cartCount === 0){
   return <EmptyCart />
 

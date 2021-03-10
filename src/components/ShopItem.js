@@ -23,7 +23,8 @@ const shopItems = [{
   src: p1,
   title: "Something",
   price: 60,
-  description: "This stunning plant will make you smile"
+  description: "This stunning plant will make you smile",
+  qty: 1
 
 },
 {
@@ -31,49 +32,56 @@ const shopItems = [{
   src: p2,
   title: "Pretty plant",
   price: 25,
-  description: "This stunning plant will make you smile"
+  description: "This stunning plant will make you smile",
+  qty: 1
 },
 {
   id: 2,
   src: p3,
   title: "Pretty plant",
   price: 80,
-  description: "This stunning plant will make you smile"
+  description: "This stunning plant will make you smile",
+  qty: 1
 },
 {
   id: 3,
   src: p4,
   title: "Pretty plant",
   price: 10,
-  description: "This stunning plant will make you smile"
+  description: "This stunning plant will make you smile",
+  qty: 1
 },
 {
   id: 4,
   src: p5,
   title: "Pretty plant",
   price: 20,
-  description: "This stunning plant will make you smile"
+  description: "This stunning plant will make you smile",
+  qty: 1
 },
 {
   id: 5,
   src: p6,
   title: "Pretty plant",
   price: 30,
-  description: "This stunning plant will make you smile"
+  description: "This stunning plant will make you smile",
+  qty: 1
 },
 {
   id: 6,
   src: p7,
   title: "Pretty plant",
   price: 80,
-  description: "This stunning plant will make you smile"
+  description: "This stunning plant will make you smile",
+  qty: 1
 },
 {
   id: 7,
   src: p8,
   title: "Pretty plant",
   price: 20,
-  description: "This stunning plant will make you smile"
+  description: "This stunning plant will make you smile",
+  qty: 1
 },
 
 ]
@@ -99,7 +107,7 @@ useEffect(()=>{
             title: shopItem.title,
             image: shopItem.src,
             price: shopItem.price,
-            qty: 1,
+            qty: shopItem.qty
           })}>Add to Cart</button>
           <p>{shopItem.description}</p>
 
