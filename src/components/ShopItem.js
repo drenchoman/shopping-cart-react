@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import {Link} from 'react-router-dom'
 import p1 from '../images/1.jpg'
 import p2 from '../images/2.jpg'
 import p3 from '../images/3.jpg'
@@ -11,6 +12,7 @@ import p8 from '../images/8.jpg'
 function ShopItem(props) {
 
 const [shopItem, setShopItem]= useState({})
+const [addedToCart, setAddedToCart]= useState(false)
 
 const findItem = () => {
   const result = shopItems.find(x => x.id === parseInt(props.match.params.id))
@@ -88,8 +90,16 @@ const shopItems = [{
 
 useEffect(()=>{
   findItem();
-  console.log(props)
+
 }, [])
+
+const handleAdd = () => {
+props.addToCart(shopItem)
+setAddedToCart(true)
+
+}
+
+
 
 
     return(
@@ -97,22 +107,25 @@ useEffect(()=>{
         <div className="shopItem">
           <div className="shopItemDiv">
             <h3 className="shopItemHeader">{shopItem.title}</h3>
-            <img alt="poop" src={shopItem.src}></img>
+            <img className="shopItemImage" alt="poop" src={shopItem.src}></img>
           </div>
 
         <div className="shopItemPricing">
           <span>${shopItem.price}</span>
-          <button onClick={()=>props.addToCart({
-            id: shopItem.id,
-            title: shopItem.title,
-            image: shopItem.src,
-            price: shopItem.price,
-            qty: shopItem.qty
-          })}>Add to Cart</button>
+          <button onClick={handleAdd}>Add to Cart</button>
+          {addedToCart && (
+            <div className="confirmAdd">
+              <h4>Thanks!</h4>
+              <Link to="/cart">
+              <button className="checkoutButton">Checkout</button>
+              </Link>
+            </div>
+
+          )}
           <p>{shopItem.description}</p>
 
-
         </div>
+
 
         </div>
       </div>

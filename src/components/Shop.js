@@ -101,7 +101,6 @@ useEffect(() => {
               </ul>
             </div>
           </div>
-          <div>
             <div className="shopItemsContainer">
                 <Cards images={plantImages} />
 
@@ -111,7 +110,6 @@ useEffect(() => {
 
 
             </div>
-          </div>
         </div>
     )
 }
