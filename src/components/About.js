@@ -1,5 +1,6 @@
 import React from 'react'
 import plant from '../images/plant.jpg'
+import Footer from './Footer'
 
 function About() {
     return (
@@ -21,11 +22,11 @@ function About() {
               <p>Thanks for shopping with us, we really appreciate your support</p>
 
               <span className="signature">Katelyn & Oscar</span>
-            
+
 
           </div>
           </div>
-
+<Footer />
         </div>
     )
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import sunflower from '../images/sunflower.jpg'
+import Footer from './Footer'
 
 function Contact() {
     return (
@@ -18,7 +19,7 @@ function Contact() {
             </div>
 
           </div>
-
+<Footer />
         </div>
     )
 }
