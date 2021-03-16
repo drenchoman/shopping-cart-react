@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/shopping-cart-react/static/css/main.451a4f62.chunk.css",
+    "main.js": "/shopping-cart-react/static/js/main.df93c27a.chunk.js",
+    "main.js.map": "/shopping-cart-react/static/js/main.df93c27a.chunk.js.map",
+    "runtime-main.js": "/shopping-cart-react/static/js/runtime-main.376971b3.js",
+    "runtime-main.js.map": "/shopping-cart-react/static/js/runtime-main.376971b3.js.map",
+    "static/js/2.d47e1b0c.chunk.js": "/shopping-cart-react/static/js/2.d47e1b0c.chunk.js",
+    "static/js/2.d47e1b0c.chunk.js.map": "/shopping-cart-react/static/js/2.d47e1b0c.chunk.js.map",
+    "index.html": "/shopping-cart-react/index.html",
+    "static/css/main.451a4f62.chunk.css.map": "/shopping-cart-react/static/css/main.451a4f62.chunk.css.map",
+    "static/js/2.d47e1b0c.chunk.js.LICENSE.txt": "/shopping-cart-react/static/js/2.d47e1b0c.chunk.js.LICENSE.txt",
+    "static/media/1.b21e64e1.jpg": "/shopping-cart-react/static/media/1.b21e64e1.jpg",
+    "static/media/2.c017b0cb.jpg": "/shopping-cart-react/static/media/2.c017b0cb.jpg",
+    "static/media/3.86cf89a4.jpg": "/shopping-cart-react/static/media/3.86cf89a4.jpg",
+    "static/media/4.ff6aa8bd.jpg": "/shopping-cart-react/static/media/4.ff6aa8bd.jpg",
+    "static/media/5.274456fe.jpg": "/shopping-cart-react/static/media/5.274456fe.jpg",
+    "static/media/6.517a2330.jpg": "/shopping-cart-react/static/media/6.517a2330.jpg",
+    "static/media/7.897f78a2.jpg": "/shopping-cart-react/static/media/7.897f78a2.jpg",
+    "static/media/8.61c9a89a.jpg": "/shopping-cart-react/static/media/8.61c9a89a.jpg",
+    "static/media/cart.0f0cd44e.svg": "/shopping-cart-react/static/media/cart.0f0cd44e.svg",
+    "static/media/App.css": "/shopping-cart-react/static/media/mons.9f270242.jpg",
+    "static/media/heart.c0c58816.svg": "/shopping-cart-react/static/media/heart.c0c58816.svg",
+    "static/media/plant.ea7c1d4f.jpg": "/shopping-cart-react/static/media/plant.ea7c1d4f.jpg",
+    "static/media/sad.b35cf57f.jpg": "/shopping-cart-react/static/media/sad.b35cf57f.jpg",
+    "static/media/sunflower.bc0cef22.jpg": "/shopping-cart-react/static/media/sunflower.bc0cef22.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.376971b3.js",
+    "static/js/2.d47e1b0c.chunk.js",
+    "static/css/main.451a4f62.chunk.css",
+    "static/js/main.df93c27a.chunk.js"
+  ]
+}
