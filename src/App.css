@@ -575,7 +575,7 @@ width: 100%;
 }
 
 .navHeader{
-  font-size: 3em;
+  font-size: 2em;
   font-family: 'Domine', serif;
 
 
@@ -586,13 +586,12 @@ width: 100%;
   display: flex;
   flex-direction: column;
   height: 100%;
+  width: 15%;
 
-  width: 30%;
-
-  border-right: 5px solid white;
+  /* border-right: 5px solid white; */
   justify-content: flex-start;
-  text-align: left;
-  padding-left: 9%;
+
+  text-align: center;
 
 
 
@@ -617,7 +616,7 @@ width: 100%;
 }
 
 .shopItemsContainer{
-  width: 70vw;
+  width: 100%;
   height: 100%;
   /* max-height: 825px; */
   display: flex;
@@ -634,12 +633,12 @@ width: 100%;
 
 .imageGrid{
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-column-gap: 1em;
   grid-row-gap: 2em;
   /* padding-left: 10%; */
-  padding: 5% 0% 5% 10%;
+  padding: 2.5% 0% 2.5% 10%;
   overflow-y: scroll;
   position: absolute;
   top: 0;
@@ -689,7 +688,7 @@ width: 100%;
 .plantImages{
   width: 100%;
   height: 100%;
-  max-height: 325px;
+  max-height: 280px;
   border-radius: 20px 20px 0 0
 
 }

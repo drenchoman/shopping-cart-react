@@ -1,6 +1,4 @@
 import React from 'react'
-import cover from "../images/cover.jpg"
-import heart from "../images/heart.svg"
 import { Link } from 'react-router-dom';
 import AdditionalHome from "./AdditionalHome.js"
 
