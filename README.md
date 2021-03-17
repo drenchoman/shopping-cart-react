@@ -2,6 +2,11 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+To DO:
+Media queries for mobile
+Change CSS, add more shop folders
+
 ## Available Scripts
 
 In the project directory, you can run:
